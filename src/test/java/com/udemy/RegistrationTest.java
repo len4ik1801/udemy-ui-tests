@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +15,7 @@ import java.util.Random;
 
 
 
-public class RegistrationTest {
+public class RegistrationTest extends TestBase {
 
     @Test(description = "Registration with valid credentials")
     public void registrationWithValidCredentials() {
@@ -26,49 +28,44 @@ public class RegistrationTest {
         By signUpBtnLocator = By.id("submit-id-submit");
         By myCoursesLinkLocator = By.xpath("//a[@data-purpose='my-courses']");
 
-        File chromeDriver = new File("src/main/resources/chromedriver");
-        ChromeDriverService chromeService = new ChromeDriverService.Builder()
-                .usingDriverExecutable(chromeDriver)
-                .usingAnyFreePort()
-                .build();
 
-        WebDriver driver = new ChromeDriver(chromeService);
 
         driver.get("https://www.udemy.com/");
-        pause(4000);
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(registrationBtnLocator));
         WebElement registrationBtn = driver.findElement(registrationBtnLocator);
         registrationBtn.click();
-        pause(2000);
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(signUpPopUpTitleLocator));
         WebElement signUpPopUpTitle = driver.findElement(signUpPopUpTitleLocator);
         Assert.assertEquals(signUpPopUpTitle.getText(), "Sign Up and Start Learning!");
-        pause(2000);
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(fullNameFldLocator));
         WebElement fullNameFld = driver.findElement(fullNameFldLocator);
         fullNameFld.sendKeys( "lena" + System.currentTimeMillis());
-        pause(2000);
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(emailFieldLocator));
         WebElement emailField = driver.findElement(emailFieldLocator);
         emailField.sendKeys("lena"+ System.currentTimeMillis() + "@appcreative.net");
-        pause(2000);
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(passwordFieldLocator));
         WebElement passwordField = driver.findElement(passwordFieldLocator);
         passwordField.sendKeys("Udemy123Ud");
-        pause(2000);
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(checkBoxYesLocator));
         WebElement checkBoxYes = driver.findElement(checkBoxYesLocator);
         checkBoxYes.click();
-        pause(3000);
+
 
         WebElement signUpBtn = driver.findElement(signUpBtnLocator);
+        wait.until(ExpectedConditions.elementToBeClickable(signUpBtnLocator));
         signUpBtn.click();
-        pause(3000);
 
+        wait.until(ExpectedConditions.elementToBeClickable(myCoursesLinkLocator));
         WebElement myCoursesLink = driver.findElement(myCoursesLinkLocator);
         Assert.assertEquals(myCoursesLink.getText(), "My courses");
-        pause(3000);
-        driver.quit();
+
+
     }
     private void pause(int milis){
         try {
