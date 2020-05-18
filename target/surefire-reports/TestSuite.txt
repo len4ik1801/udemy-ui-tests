@@ -1,19 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.715 s <<< FAILURE! - in TestSuite
-com.udemy.LoginTest.loginWithValidCredentials  Time elapsed: 10.079 s  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class= 'ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs'] (tried for 5 second(s) with 500 milliseconds interval)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.056 s <<< FAILURE! - in TestSuite
+com.udemy.LoginTest.loginWithValidCredentials  Time elapsed: 8.433 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@data-purpose='my-courses'] (tried for 5 second(s) with 500 milliseconds interval)
 	at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:28)
 Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class= 'ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs']"}
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@data-purpose='my-courses']"}
   (Session info: chrome=81.0.4044.138)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'ek-mm-034.local', ip: 'fe80:0:0:0:14bd:384c:2075:2fe8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.4', java.version: '13.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:58858}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 53e15a5776a18bcdc368640c17267041
-*** Element info: {Using=xpath, value=//div[@class= 'ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:65532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 57b0d8a7956bfe1c79f6afaf5a898b39
+*** Element info: {Using=xpath, value=//a[@data-purpose='my-courses']}
 	at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:28)
 

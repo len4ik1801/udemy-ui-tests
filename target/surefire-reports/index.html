@@ -128,20 +128,20 @@
                   <a name="loginWithValidCredentials">
                   </a> <!-- loginWithValidCredentials -->
                   <span class="method-name">loginWithValidCredentials</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class= &apos;ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs&apos;] (tried for 5 second(s) with 500 milliseconds interval)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@data-purpose=&apos;my-courses&apos;] (tried for 5 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class= &apos;ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs&apos;]&quot;}
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@data-purpose=&apos;my-courses&apos;]&quot;}
   (Session info: chrome=81.0.4044.138)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;ek-mm-034.local&apos;, ip: &apos;fe80:0:0:0:14bd:384c:2075:2fe8%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.4&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:58858}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 53e15a5776a18bcdc368640c17267041
-*** Element info: {Using=xpath, value=//div[@class= &apos;ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:65532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 57b0d8a7956bfe1c79f6afaf5a898b39
+*** Element info: {Using=xpath, value=//a[@data-purpose=&apos;my-courses&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -224,12 +224,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginWithValidCredentials')
 data.setCell(0, 2, 'com.udemy.LoginTest')
-data.setCell(0, 3, 10076);
+data.setCell(0, 3, 8428);
 window.suiteTableData['UdemyWeb']= { tableData: data, tableDiv: 'times-div-UdemyWeb'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-UdemyWeb">
               </div> <!-- times-div-UdemyWeb -->
             </div> <!-- times-div -->
@@ -264,11 +264,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">loginWithValidCredentials</span>
-                <span class="method-start">1120 ms</span>
+                <span class="method-start">1136 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">11201 ms</span>
+                <span class="method-start">9569 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

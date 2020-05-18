@@ -2,22 +2,22 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-17T23:50:00 EEST" name="UdemyWeb" finished-at="2020-05-17T23:50:12 EEST" duration-ms="11307">
+  <suite started-at="2020-05-18T19:11:25 EEST" name="UdemyWeb" finished-at="2020-05-18T19:11:35 EEST" duration-ms="9666">
     <groups>
     </groups>
-    <test started-at="2020-05-17T23:50:00 EEST" name="Login tests" finished-at="2020-05-17T23:50:12 EEST" duration-ms="11307">
+    <test started-at="2020-05-18T19:11:25 EEST" name="Login tests" finished-at="2020-05-18T19:11:35 EEST" duration-ms="9666">
       <class name="com.udemy.LoginTest">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.udemy.LoginTest@6973bf95]" started-at="2020-05-17T23:50:00 EEST" name="openBrowser" description="Open browser" finished-at="2020-05-17T23:50:01 EEST" duration-ms="1119" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.udemy.LoginTest@6973bf95]" started-at="2020-05-18T19:11:25 EEST" name="openBrowser" description="Open browser" finished-at="2020-05-18T19:11:26 EEST" duration-ms="1136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="loginWithValidCredentials()[pri:0, instance:com.udemy.LoginTest@6973bf95]" started-at="2020-05-17T23:50:01 EEST" name="loginWithValidCredentials" description="Login with valid credentials" finished-at="2020-05-17T23:50:12 EEST" duration-ms="10076" status="FAIL">
+        <test-method signature="loginWithValidCredentials()[pri:0, instance:com.udemy.LoginTest@6973bf95]" started-at="2020-05-18T19:11:26 EEST" name="loginWithValidCredentials" description="Login with valid credentials" finished-at="2020-05-18T19:11:35 EEST" duration-ms="8428" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class= 'ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs'] (tried for 5 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@data-purpose='my-courses'] (tried for 5 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class= 'ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs'] (tried for 5 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@data-purpose='my-courses'] (tried for 5 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:28)
@@ -53,15 +53,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class= 'ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs']"}
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@data-purpose='my-courses']"}
   (Session info: chrome=81.0.4044.138)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'ek-mm-034.local', ip: 'fe80:0:0:0:14bd:384c:2075:2fe8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.4', java.version: '13.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:58858}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 53e15a5776a18bcdc368640c17267041
-*** Element info: {Using=xpath, value=//div[@class= 'ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:65532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 57b0d8a7956bfe1c79f6afaf5a898b39
+*** Element info: {Using=xpath, value=//a[@data-purpose='my-courses']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -87,7 +87,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.udemy.LoginTest@6973bf95]" started-at="2020-05-17T23:50:12 EEST" name="closeBrowser" description="Close browser" finished-at="2020-05-17T23:50:12 EEST" duration-ms="88" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.udemy.LoginTest@6973bf95]" started-at="2020-05-18T19:11:35 EEST" name="closeBrowser" description="Close browser" finished-at="2020-05-18T19:11:35 EEST" duration-ms="80" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

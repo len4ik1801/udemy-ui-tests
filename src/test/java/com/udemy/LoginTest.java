@@ -12,9 +12,9 @@ import java.util.Date;
 public class LoginTest extends TestBase{
     @Test(description ="Login with valid credentials")
     public void loginWithValidCredentials(){
-        By profileIconLocator = By.xpath("//div[@class= 'ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs']");
+        //By profileIconLocator = By.xpath("//div[@class= 'ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs']");
+        By myCoursesLinkLocator = By.xpath("//a[@data-purpose='my-courses']");
         driver.get("https://www.udemy.com/");
-
         Cookie cookieSessionId = new Cookie.Builder("dj_session_id","caf307objsyvw1ilbqf2xwv5i2hoot2j")
                 .domain("www.udemy.com")
                 .expiresOn(new Date(2020,06,16))
@@ -23,11 +23,12 @@ public class LoginTest extends TestBase{
                 .path("/www.udemy.com")
                 .build();
         driver.manage().addCookie(cookieSessionId);
-        driver.get(driver.getCurrentUrl());
+        driver.navigate().refresh();
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(profileIconLocator));
-        WebElement profileIcon = driver.findElement(profileIconLocator);
-        Assert.assertEquals(profileIcon.isDisplayed(), profileIcon);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(myCoursesLinkLocator));
+        WebElement myCoursesLink = driver.findElement(myCoursesLinkLocator);
+        Assert.assertEquals(myCoursesLink.getText(), "My courses");
+
     }
 
 }
