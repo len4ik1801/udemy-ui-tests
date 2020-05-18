@@ -20,7 +20,7 @@ public class LoginTest extends TestBase{
                 .expiresOn(new Date(2020,06,16))
                 .isHttpOnly(true)
                 .isSecure(false)
-                .path("/www.udemy.com")
+                .path("/")
                 .build();
         driver.manage().addCookie(cookieSessionId);
         driver.navigate().refresh();
