@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="UdemyWeb">
-<!--    <test name="Registration tests">-->
+<!--   <test name="Registration tests">-->
 <!--        <classes>-->
 <!--            <class name="com.udemy.RegistrationTest">-->
 <!--                <methods>-->
@@ -10,11 +10,29 @@
 <!--            </class>-->
 <!--        </classes>-->
 <!--    </test>-->
-    <test name="Login tests">
+<!--    <test name="Login tests">-->
+<!--        <classes>-->
+<!--            <class name="com.udemy.LoginTest">-->
+<!--                <methods>-->
+<!--                    <include name="loginWithValidCredentials"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Search tests">-->
+<!--        <classes>-->
+<!--            <class name="com.udemy.SearchTest">-->
+<!--                <methods>-->
+<!--                    <include name="searchDataTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="Home tests">
         <classes>
-            <class name="com.udemy.LoginTest">
+            <class name="com.udemy.HomeTest">
                 <methods>
-                    <include name="loginWithValidCredentials"/>
+                    <include name="checkCategoriesList"/>
                 </methods>
             </class>
         </classes>
