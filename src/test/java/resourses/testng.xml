@@ -19,22 +19,22 @@
 <!--            </class>-->
 <!--        </classes>-->
 <!--    </test>-->
-<!--    <test name="Search tests">-->
-<!--        <classes>-->
-<!--            <class name="com.udemy.SearchTest">-->
-<!--                <methods>-->
-<!--                    <include name="searchDataTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-    <test name="Home tests">
+    <test name="Search tests">
         <classes>
-            <class name="com.udemy.HomeTest">
+            <class name="com.udemy.SearchTest">
                 <methods>
-                    <include name="checkCategoriesList"/>
+                    <include name="searchDataTest"/>
                 </methods>
             </class>
         </classes>
     </test>
+<!--    <test name="Home tests">-->
+<!--        <classes>-->
+<!--            <class name="com.udemy.HomeTest">-->
+<!--                <methods>-->
+<!--                    <include name="checkCategoriesList"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 public class CoursesPage {
 
     private WebDriver driver;
@@ -17,13 +19,13 @@ public class CoursesPage {
     }
 
     By searchResultsLocator = By.xpath("//h1[@class='udlite-heading-xxl']");
-    By searchAutoCompleteLocator = By.xpath("//input[@value = 'Angular']");
+    By searchAutoCompleteLocator = By.xpath("//input[@class='udlite-text-input udlite-text-input-small udlite-text-sm udlite-search-form-autocomplete-input js-header-search-field']");
     By firstItemSearchResultsLocator = By.xpath("//div[contains(text(),'Angular - The Complete Guide (2020 Edition)')]/ancestor::div[@class='popover--popover--t3rNO popover--popover-hover--14ngr']");
 
 
-    public CoursesPage checkCurrentUrl() {
-        driver.getCurrentUrl().contains("ref=home");
-        return this;
+    public boolean checkCurrentUrl() {
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+       return driver.getCurrentUrl().contains("ref=home");
     }
 
     public String checkSearchResultsText() {
@@ -35,7 +37,7 @@ public class CoursesPage {
     public String headerSearchFieldText() {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(searchAutoCompleteLocator));
         WebElement searchFieldText = driver.findElement(searchAutoCompleteLocator);
-        return searchFieldText.getAttribute("value");
+        return searchFieldText.getText();
     }
     public String checkFirstResultsHaveAngularText(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(firstItemSearchResultsLocator));

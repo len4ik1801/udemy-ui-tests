@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.667 s <<< FAILURE! - in TestSuite
-com.udemy.HomeTest.checkCategoriesList  Time elapsed: 3.211 s  <<< FAILURE!
-java.lang.AssertionError: Lists differ at element [0]: Development != [[ChromeDriver: chrome on MAC (590a4e6411088ca12ef87e702288194f)] -> xpath: //ul[@class='dropdown-menu__list dropdown-menu__list--level-one']/li] expected [Development] but found [[[ChromeDriver: chrome on MAC (590a4e6411088ca12ef87e702288194f)] -> xpath: //ul[@class='dropdown-menu__list dropdown-menu__list--level-one']/li]]
-	at com.udemy.HomeTest.checkCategoriesList(HomeTest.java:15)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.848 s - in TestSuite

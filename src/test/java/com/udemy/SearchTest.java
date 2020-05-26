@@ -10,11 +10,12 @@ public class SearchTest extends TestBase {
         homePage.openHomePage();
         homePage.enterSearchWord("Angular");
         homePage.clickSearchBtn();
+        Assert.assertTrue(coursesPage.checkCurrentUrl());
         coursesPage.checkSearchResultsText();
         Assert.assertTrue(coursesPage.checkSearchResultsText().contains("angular"));
         coursesPage.headerSearchFieldText();
-        Assert.assertFalse(coursesPage.headerSearchFieldText().isEmpty());
+        Assert.assertFalse(coursesPage.headerSearchFieldText().contains("angular"));
         coursesPage.checkFirstResultsHaveAngularText();
-        Assert.assertEquals(coursesPage.checkFirstResultsHaveAngularText(), "Angular - The Complete Guide (2020 Edition)");
+        Assert.assertTrue(coursesPage.checkFirstResultsHaveAngularText().contains("Angular"));
     }
 }
