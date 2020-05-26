@@ -1,5 +1,7 @@
 package constants;
 
+import org.openqa.selenium.WebElement;
+
 import java.util.List;
 
 import static java.util.Arrays.asList;

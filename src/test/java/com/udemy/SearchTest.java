@@ -10,7 +10,7 @@ public class SearchTest extends TestBase {
         homePage.openHomePage();
         homePage.enterSearchWord("Angular");
         homePage.clickSearchBtn();
-        Assert.assertTrue(coursesPage.checkCurrentUrl());
+        Assert.assertTrue(coursesPage.checkThatCurrentUrlContainsText());
         coursesPage.checkSearchResultsText();
         Assert.assertTrue(coursesPage.checkSearchResultsText().contains("angular"));
         coursesPage.headerSearchFieldText();
