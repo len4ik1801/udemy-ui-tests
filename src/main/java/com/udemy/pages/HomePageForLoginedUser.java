@@ -3,8 +3,13 @@ package com.udemy.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.beans.PropertyChangeListener;
 
 
 public class HomePageForLoginedUser {
@@ -14,15 +19,16 @@ public class HomePageForLoginedUser {
         this.driver = driver;
         this.wait = wait;
     }
-    //By profileIconLocator = By.xpath("//div[@class= 'ud-component--header-v6--user-dropdown-button hidden-xs hidden-xxs']");
-    By myCoursesLinkLocator = By.xpath("//a[@data-purpose='my-courses']");
+    By profileIconLocator = By.xpath("//span[text()='L']");
 
-    public String getMyCoursesLinkTitle(){
-        wait.until(ExpectedConditions.elementToBeClickable(myCoursesLinkLocator));
-        WebElement myCoursesLink = driver.findElement(myCoursesLinkLocator);
-        return myCoursesLink.getText();
 
+    public String getNameSymbol(){
+        wait.until(ExpectedConditions.elementToBeClickable(profileIconLocator));
+        Actions action = new Actions (driver);
+        WebElement profileIcon = driver.findElement(profileIconLocator);
+        return profileIcon.getText();
     }
+
 
 
 }

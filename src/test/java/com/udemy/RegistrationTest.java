@@ -3,7 +3,7 @@ package com.udemy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
+import static com.udemy.testdata.UserData.newUser;
 
 
 public class RegistrationTest extends TestBase {
@@ -14,14 +14,13 @@ public class RegistrationTest extends TestBase {
         homePage.openHomePage();
         homePage.openRegistrationPopup();
         Assert.assertEquals(registrationPopup.getPopupTitle(), "Sign Up and Start Learning!");
-        registrationPopup
-                .enterFullName("lena" + System.currentTimeMillis())
-        .enterEmail("lena"+ System.currentTimeMillis() + "@appcreative.net")
-        .enterPassword("Udemy123Ud")
+        registrationPopup.enterFullName(newUser.getName())
+        .enterEmail(newUser.getEmail())
+        .enterPassword(newUser.getPassword())
         .fillCheckBox()
         .clickSignUpBtn();
-        homePageForLoginedUser.getMyCoursesLinkTitle();
-        Assert.assertEquals(homePageForLoginedUser.getMyCoursesLinkTitle(), "My courses");
+        homePageForLoginedUser.getNameSymbol();
+        Assert.assertEquals(homePageForLoginedUser.getNameSymbol(), "L");
     }
 
 }

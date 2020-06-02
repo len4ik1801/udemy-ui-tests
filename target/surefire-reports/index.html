@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-UdemyWeb">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-UdemyWeb" title="com.udemy.SearchTest" class="method navigator-link" hash-for-method="searchDataTest">searchDataTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-UdemyWeb" title="com.udemy.HomeTest" class="method navigator-link" hash-for-method="checkCategoriesList">checkCategoriesList</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-UdemyWeb -->
@@ -120,16 +120,16 @@
           <div class="suite-UdemyWeb-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.udemy.SearchTest</span>
+              <span class="class-name">com.udemy.HomeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="searchDataTest">
-                  </a> <!-- searchDataTest -->
-                  <span class="method-name">searchDataTest</span>
+                  <a name="checkCategoriesList">
+                  </a> <!-- checkCategoriesList -->
+                  <span class="method-name">checkCategoriesList</span>
                   <em>
-(Search test)                  </em>
+(CheckCategoriesList)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,15 +144,15 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;UdemyWeb&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Search tests&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Home tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.udemy.SearchTest&quot;&gt;
+      &lt;class name=&quot;com.udemy.HomeTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;searchDataTest&quot;/&gt;
+          &lt;include name=&quot;checkCategoriesList&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.udemy.SearchTest --&gt;
+      &lt;/class&gt; &lt;!-- com.udemy.HomeTest --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Search tests --&gt;
+  &lt;/test&gt; &lt;!-- Home tests --&gt;
 &lt;/suite&gt; &lt;!-- UdemyWeb --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,7 +164,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Search tests (1 class)</span>
+                <span class="test-name">Home tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'searchDataTest')
-data.setCell(0, 2, 'com.udemy.SearchTest')
-data.setCell(0, 3, 4359);
+data.setCell(0, 1, 'checkCategoriesList')
+data.setCell(0, 2, 'com.udemy.HomeTest')
+data.setCell(0, 3, 3290);
 window.suiteTableData['UdemyWeb']= { tableData: data, tableDiv: 'times-div-UdemyWeb'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-UdemyWeb">
               </div> <!-- times-div-UdemyWeb -->
             </div> <!-- times-div -->
@@ -225,18 +225,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.udemy.SearchTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.udemy.HomeTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openBrowser</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">searchDataTest</span>
-                <span class="method-start">1100 ms</span>
+                <span class="method-name">checkCategoriesList</span>
+                <span class="method-start">1091 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">5460 ms</span>
+                <span class="method-start">4383 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

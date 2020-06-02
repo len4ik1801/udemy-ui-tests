@@ -2,6 +2,8 @@ package com.udemy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static com.udemy.testdata.UserData.createdUser;
+
 
 public class LoginTest extends TestBase{
 
@@ -9,8 +11,11 @@ public class LoginTest extends TestBase{
     public void loginWithValidCredentials(){
         homePage.openHomePage();
         loginPopup.loginWithCookies();
-        Assert.assertEquals(homePageForLoginedUser.getMyCoursesLinkTitle(), "My courses");
-
+//        homePage.openLoginPopup();
+  //      loginPopup.enterEmail(createdUser.getEmail());
+    //    loginPopup.enterPassword(createdUser.getPassword());
+      //  loginPopup.clickLoginBtn();
+        Assert.assertEquals(homePageForLoginedUser.getNameSymbol(), "L");
     }
 
 }

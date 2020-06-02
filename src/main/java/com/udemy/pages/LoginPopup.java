@@ -13,26 +13,56 @@ public class LoginPopup {
 
     private WebDriver driver;
     private WebDriverWait wait;
+
     public LoginPopup(WebDriver driver, WebDriverWait wait){
         this.driver = driver;
         this.wait = wait;
     }
-    By myCoursesLinkLocator = By.xpath("//a[@data-purpose='my-courses']");
+    By popupTitleLocator = By.xpath("//div[@class='loginbox-v4__header']");
+    By emailFieldLocator = By.xpath("//input[@name='email']");
+    By passwordFldLocator = By.xpath("//input[@name='password']");
+    By loginBtnLocator = By.xpath("//input[@name='submit']");
+    By profileIconLocator = By.xpath("//span[text()='L']");
 
      public LoginPopup loginWithCookies(){
-         Cookie cookieSessionId = new Cookie.Builder("dj_session_id","caf307objsyvw1ilbqf2xwv5i2hoot2j")
+         Cookie cookieSessionId = new Cookie.Builder("dj_session_id","mtvlzd1bs3o7j1qrghclqlgx310pw02v")
                  .domain("www.udemy.com")
-                 .expiresOn(new Date(2020,06,16))
+                 .expiresOn(new Date(2020,07,02))
                  .isHttpOnly(true)
                  .isSecure(false)
                  .path("/")
                  .build();
          driver.manage().addCookie(cookieSessionId);
          driver.navigate().refresh();
-         wait.until(ExpectedConditions.visibilityOfElementLocated(myCoursesLinkLocator));
-         WebElement myCoursesLink = driver.findElement(myCoursesLinkLocator);
+ //        wait.until(ExpectedConditions.visibilityOfElementLocated(profileIconLocator));
+ //        WebElement profileIcon = driver.findElement(profileIconLocator);
          return this;
      }
+     public String getPopupTitle(){
+         wait.until(ExpectedConditions.visibilityOfElementLocated(popupTitleLocator));
+         WebElement popUpTitle = driver.findElement(popupTitleLocator);
+         return popUpTitle.getText();
+     }
+     public LoginPopup enterEmail(String email) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(emailFieldLocator));
+        WebElement emailFld = driver.findElement(emailFieldLocator);
+        emailFld.sendKeys(email);
+        return this;
+    }
+    public LoginPopup enterPassword(String password) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(passwordFldLocator));
+        WebElement passwordFld = driver.findElement(passwordFldLocator);
+        passwordFld.sendKeys(password);
+        return this;
+    }
+    public LoginPopup clickLoginBtn(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(loginBtnLocator));
+        WebElement loginBtn = driver.findElement(loginBtnLocator);
+        loginBtn.click();
+        return this;
+    }
+
+
 
 
 }

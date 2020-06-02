@@ -1,6 +1,5 @@
 package com.udemy;
 
-import com.udemy.pages.CoursesPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,12 +9,12 @@ public class SearchTest extends TestBase {
         homePage.openHomePage();
         homePage.enterSearchWord("Angular");
         homePage.clickSearchBtn();
-        Assert.assertTrue(coursesPage.checkThatCurrentUrlContainsText());
+        Assert.assertTrue(coursesPage.checkThatCurrentUrlContainsText().contains("ref=home"));
         coursesPage.checkSearchResultsText();
         Assert.assertTrue(coursesPage.checkSearchResultsText().contains("angular"));
-        coursesPage.headerSearchFieldText();
-        Assert.assertFalse(coursesPage.headerSearchFieldText().contains("angular"));
-        coursesPage.checkFirstResultsHaveAngularText();
-        Assert.assertTrue(coursesPage.checkFirstResultsHaveAngularText().contains("Angular"));
+        coursesPage.checkHeaderSearchFieldText();
+        Assert.assertFalse(coursesPage.checkHeaderSearchFieldText().contains("angular"));
+        coursesPage.getFirstCourseTitle();
+        Assert.assertTrue(coursesPage.getFirstCourseTitle().contains("Angular"));
     }
 }

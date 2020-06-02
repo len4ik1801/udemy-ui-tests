@@ -23,9 +23,9 @@ public class CoursesPage {
     By firstItemSearchResultsLocator = By.xpath("(//div[@class='course-card--main-content--3xEIw']/div)[1]");
 
 
-    public boolean checkThatCurrentUrlContainsText() {
+    public String checkThatCurrentUrlContainsText() {
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
-       return driver.getCurrentUrl().contains("ref=home");
+        return driver.getCurrentUrl();
     }
 
     public String checkSearchResultsText() {
@@ -34,12 +34,12 @@ public class CoursesPage {
         return searchResultText.getText();
     }
 
-    public String headerSearchFieldText() {
+    public String checkHeaderSearchFieldText() {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(searchAutoCompleteLocator));
         WebElement searchFieldText = driver.findElement(searchAutoCompleteLocator);
         return searchFieldText.getText();
     }
-    public String checkFirstResultsHaveAngularText(){
+    public String getFirstCourseTitle(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(firstItemSearchResultsLocator));
         WebElement searchResultsFirstItem = driver.findElement(firstItemSearchResultsLocator);
         return searchResultsFirstItem.getText();
