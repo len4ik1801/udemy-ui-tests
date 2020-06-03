@@ -28,13 +28,13 @@
 <!--            </class>-->
 <!--        </classes>-->
 <!--    </test>-->
-    <test name="Home tests">
-        <classes>
-            <class name="com.udemy.HomeTest">
-                <methods>
-                    <include name="checkCategoriesList"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Home tests">-->
+<!--        <classes>-->
+<!--            <class name="com.udemy.HomeTest">-->
+<!--                <methods>-->
+<!--                    <include name="checkCategoriesList"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

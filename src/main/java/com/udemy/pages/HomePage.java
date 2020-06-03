@@ -59,11 +59,11 @@ public class HomePage {
     }
     public List<String> checkListOfCategories(){
         List<WebElement> categoriesList = driver.findElements(listOfCategoriesLocator);
-        List<String> listOfCategoriesElements = new ArrayList<String>();
+        List<String> listOfCategoriesNames = new ArrayList<String>();
         for (WebElement namesOfCategory : categoriesList){
-            listOfCategoriesElements.add(namesOfCategory.getText());
+            listOfCategoriesNames.add(namesOfCategory.getText());
         }
-        return listOfCategoriesElements;
+        return listOfCategoriesNames;
     }
 
 

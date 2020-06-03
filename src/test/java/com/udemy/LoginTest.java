@@ -11,10 +11,6 @@ public class LoginTest extends TestBase{
     public void loginWithValidCredentials(){
         homePage.openHomePage();
         loginPopup.loginWithCookies();
-//        homePage.openLoginPopup();
-  //      loginPopup.enterEmail(createdUser.getEmail());
-    //    loginPopup.enterPassword(createdUser.getPassword());
-      //  loginPopup.clickLoginBtn();
         Assert.assertEquals(homePageForLoginedUser.getNameSymbol(), "L");
     }
 

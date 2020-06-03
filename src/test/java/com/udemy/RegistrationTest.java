@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static com.udemy.testdata.UserData.newUser;
+import static constants.HomeMenuConst.SIGN_UP_POPUP_TITLE;
 
 
 public class RegistrationTest extends TestBase {
@@ -13,13 +14,12 @@ public class RegistrationTest extends TestBase {
     public void registrationWithValidCredentials() {
         homePage.openHomePage();
         homePage.openRegistrationPopup();
-        Assert.assertEquals(registrationPopup.getPopupTitle(), "Sign Up and Start Learning!");
+        Assert.assertEquals(registrationPopup.getPopupTitle(), SIGN_UP_POPUP_TITLE);
         registrationPopup.enterFullName(newUser.getName())
         .enterEmail(newUser.getEmail())
         .enterPassword(newUser.getPassword())
         .fillCheckBox()
         .clickSignUpBtn();
-        homePageForLoginedUser.getNameSymbol();
         Assert.assertEquals(homePageForLoginedUser.getNameSymbol(), "L");
     }
 
