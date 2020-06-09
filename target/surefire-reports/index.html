@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-UdemyWeb">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-UdemyWeb" title="com.udemy.LoginTest" class="method navigator-link" hash-for-method="loginWithValidCredentials">loginWithValidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-UdemyWeb" title="com.udemy.RegistrationTest" class="method navigator-link" hash-for-method="registrationWithValidCredentials">registrationWithValidCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-UdemyWeb -->
@@ -120,29 +120,30 @@
           <div class="suite-UdemyWeb-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.udemy.LoginTest</span>
+              <span class="class-name">com.udemy.RegistrationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithValidCredentials">
-                  </a> <!-- loginWithValidCredentials -->
-                  <span class="method-name">loginWithValidCredentials</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()=&apos;L&apos;] (tried for 5 second(s) with 500 milliseconds interval)
+                  <a name="registrationWithValidCredentials">
+                  </a> <!-- registrationWithValidCredentials -->
+                  <span class="method-name">registrationWithValidCredentials</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-purpose=&apos;header-signup&apos;] or //span[contains(text(), &apos;Sign up&apos;)] (tried for 5 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.udemy.pages.HomePageForLoginedUser.getNameSymbol(HomePageForLoginedUser.java:26)
-	at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:14)
+	at com.udemy.pages.HomePage.openRegistrationPopup(HomePage.java:53)
+	at com.udemy.RegistrationTest.registrationWithValidCredentials(RegistrationTest.java:18)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;L&apos;]&quot;}
-  (Session info: chrome=83.0.4103.61)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //button[@data-purpose=&apos;header-signup&apos;] or //span[contains(text(), &apos;Sign up&apos;)] because of the following error:
+TypeError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The result is not a node set, and therefore cannot be converted to the desired type.
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ek-mm-034.local&apos;, ip: &apos;fe80:0:0:0:8df:8ff9:122b:4e14%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.4&apos;, java.version: &apos;13.0.2&apos;
+System info: host: &apos;ek-mm-034.local&apos;, ip: &apos;fe80:0:0:0:23:55da:1a01:33e0%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.4&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:65145}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 0da0ccca20e5a694a6b5a769ab8804b5
-*** Element info: {Using=xpath, value=//span[text()=&apos;L&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:59817}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0879b6ad6f3248c51d034901971a192b
+*** Element info: {Using=xpath, value=//button[@data-purpose=&apos;header-signup&apos;] or //span[contains(text(), &apos;Sign up&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -155,14 +156,12 @@ Session ID: 0da0ccca20e5a694a6b5a769ab8804b5
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 34 more
 ... Removed 36 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(Login with valid credentials)                  </em>
+(Registration with valid credentials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,15 +176,15 @@ Session ID: 0da0ccca20e5a694a6b5a769ab8804b5
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;UdemyWeb&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Login tests&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Registration tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.udemy.LoginTest&quot;&gt;
+      &lt;class name=&quot;com.udemy.RegistrationTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;loginWithValidCredentials&quot;/&gt;
+          &lt;include name=&quot;registrationWithValidCredentials&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.udemy.LoginTest --&gt;
+      &lt;/class&gt; &lt;!-- com.udemy.RegistrationTest --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login tests --&gt;
+  &lt;/test&gt; &lt;!-- Registration tests --&gt;
 &lt;/suite&gt; &lt;!-- UdemyWeb --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -197,7 +196,7 @@ Session ID: 0da0ccca20e5a694a6b5a769ab8804b5
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Login tests (1 class)</span>
+                <span class="test-name">Registration tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -225,14 +224,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginWithValidCredentials')
-data.setCell(0, 2, 'com.udemy.LoginTest')
-data.setCell(0, 3, 9001);
+data.setCell(0, 1, 'registrationWithValidCredentials')
+data.setCell(0, 2, 'com.udemy.RegistrationTest')
+data.setCell(0, 3, 8371);
 window.suiteTableData['UdemyWeb']= { tableData: data, tableDiv: 'times-div-UdemyWeb'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-UdemyWeb">
               </div> <!-- times-div-UdemyWeb -->
             </div> <!-- times-div -->
@@ -258,7 +257,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.udemy.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.udemy.RegistrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openBrowser</span>
                 <span class="method-start">0 ms</span>
@@ -266,12 +265,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">loginWithValidCredentials</span>
-                <span class="method-start">1119 ms</span>
+                <span class="method-name">registrationWithValidCredentials</span>
+                <span class="method-start">1177 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">10125 ms</span>
+                <span class="method-start">9552 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -4,10 +4,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static com.udemy.testdata.UserData.newUser;
-import static constants.HomeMenuConst.SIGN_UP_POPUP_TITLE;
+import static constants.PopupConst.SIGN_UP_POPUP_TITLE;
 
 
 public class RegistrationTest extends TestBase {
+
+
 
 
     @Test(description = "Registration with valid credentials")

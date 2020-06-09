@@ -1,19 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.512 s <<< FAILURE! - in TestSuite
-com.udemy.LoginTest.loginWithValidCredentials  Time elapsed: 9.006 s  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()='L'] (tried for 5 second(s) with 500 milliseconds interval)
-	at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:14)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='L']"}
-  (Session info: chrome=83.0.4103.61)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.187 s <<< FAILURE! - in TestSuite
+com.udemy.RegistrationTest.registrationWithValidCredentials  Time elapsed: 8.375 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-purpose='header-signup'] or //span[contains(text(), 'Sign up')] (tried for 5 second(s) with 500 milliseconds interval)
+	at com.udemy.RegistrationTest.registrationWithValidCredentials(RegistrationTest.java:18)
+Caused by: org.openqa.selenium.InvalidSelectorException: 
+invalid selector: Unable to locate an element with the xpath expression //button[@data-purpose='header-signup'] or //span[contains(text(), 'Sign up')] because of the following error:
+TypeError: Failed to execute 'evaluate' on 'Document': The result is not a node set, and therefore cannot be converted to the desired type.
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ek-mm-034.local', ip: 'fe80:0:0:0:8df:8ff9:122b:4e14%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.4', java.version: '13.0.2'
+System info: host: 'ek-mm-034.local', ip: 'fe80:0:0:0:23:55da:1a01:33e0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.4', java.version: '13.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:65145}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 0da0ccca20e5a694a6b5a769ab8804b5
-*** Element info: {Using=xpath, value=//span[text()='L']}
-	at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:14)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:59817}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0879b6ad6f3248c51d034901971a192b
+*** Element info: {Using=xpath, value=//button[@data-purpose='header-signup'] or //span[contains(text(), 'Sign up')]}
+	at com.udemy.RegistrationTest.registrationWithValidCredentials(RegistrationTest.java:18)
 

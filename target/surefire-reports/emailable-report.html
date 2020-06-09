@@ -9,25 +9,26 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">UdemyWeb</th></tr>
-<tr><td><a href="#t0">Login tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">10,231</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Registration tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">9,654</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">UdemyWeb</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.udemy.LoginTest</td><td><a href="#m0">loginWithValidCredentials</a></td><td rowspan="1">1591164919972</td><td rowspan="1">9001</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">UdemyWeb</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Registration tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.udemy.RegistrationTest</td><td><a href="#m0">registrationWithValidCredentials</a></td><td rowspan="1">1591691921162</td><td rowspan="1">8371</td></tr></tbody>
 </table>
-<h2>Login tests</h2><h3 id="m0">com.udemy.LoginTest#loginWithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()=&apos;L&apos;] (tried for 5 second(s) with 500 milliseconds interval)
+<h2>Registration tests</h2><h3 id="m0">com.udemy.RegistrationTest#registrationWithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-purpose=&apos;header-signup&apos;] or //span[contains(text(), &apos;Sign up&apos;)] (tried for 5 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.udemy.pages.HomePageForLoginedUser.getNameSymbol(HomePageForLoginedUser.java:26)
-	at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:14)
+	at com.udemy.pages.HomePage.openRegistrationPopup(HomePage.java:53)
+	at com.udemy.RegistrationTest.registrationWithValidCredentials(RegistrationTest.java:18)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;L&apos;]&quot;}
-  (Session info: chrome=83.0.4103.61)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //button[@data-purpose=&apos;header-signup&apos;] or //span[contains(text(), &apos;Sign up&apos;)] because of the following error:
+TypeError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The result is not a node set, and therefore cannot be converted to the desired type.
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ek-mm-034.local&apos;, ip: &apos;fe80:0:0:0:8df:8ff9:122b:4e14%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.4&apos;, java.version: &apos;13.0.2&apos;
+System info: host: &apos;ek-mm-034.local&apos;, ip: &apos;fe80:0:0:0:23:55da:1a01:33e0%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.4&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:65145}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 0da0ccca20e5a694a6b5a769ab8804b5
-*** Element info: {Using=xpath, value=//span[text()=&apos;L&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:59817}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0879b6ad6f3248c51d034901971a192b
+*** Element info: {Using=xpath, value=//button[@data-purpose=&apos;header-signup&apos;] or //span[contains(text(), &apos;Sign up&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -40,8 +41,6 @@ Session ID: 0da0ccca20e5a694a6b5a769ab8804b5
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 34 more
 ... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
