@@ -31,7 +31,7 @@ public class RegistrationPopup {
     @FindBy(id = "submit-id-submit")
             private WebElement signUpBtn;
 
-    By signUpPopUpTitleLocator = By.xpath("//div[@class=' loginbox-v4__header loginbox-v4__header--signup']");
+    By signUpPopUpTitleLocator = By.xpath("//div[@class= ' loginbox-v4__header loginbox-v4__header--signup' or contains(text(),' Sign Up and Start Learning!')]");
     By fullNameFldLocator = By.id("id_fullname");
     By emailFieldLocator = By.id("email--1");
     By passwordFieldLocator = By.id("password");

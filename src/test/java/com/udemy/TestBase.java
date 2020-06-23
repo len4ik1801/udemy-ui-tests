@@ -15,9 +15,11 @@ public class TestBase {
     WebDriverWait wait;
     HomePage homePage;
     RegistrationPopup registrationPopup;
-    HomePageForLoginedUser homePageForLoginedUser;
+
     LoginPopup loginPopup;
     CoursesPage coursesPage;
+    BusinessPage businessPage;
+    TeachOnUdemyPage teachOnUdemyPage;
 
 
     @BeforeMethod(description = "Open browser")
@@ -32,16 +34,26 @@ public class TestBase {
          wait= new WebDriverWait(driver, 5);
          homePage = new HomePage(driver,wait);
          registrationPopup =  new RegistrationPopup(driver,wait);
-         homePageForLoginedUser = new HomePageForLoginedUser(driver,wait);
          loginPopup = new LoginPopup(driver,wait);
          coursesPage = new CoursesPage(driver,wait);
+         businessPage = new BusinessPage(driver,wait);
+         teachOnUdemyPage = new TeachOnUdemyPage(driver,wait);
 
 
 
     }
 
+
     @AfterMethod(description = "Close browser")
     public void closeBrowser(){
         driver.quit();
+    }
+
+    public void pause(int millis) {
+        try{
+            Thread.sleep(millis);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
     }
 }

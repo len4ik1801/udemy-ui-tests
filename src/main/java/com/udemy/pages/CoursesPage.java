@@ -26,12 +26,12 @@ public class CoursesPage {
     private WebElement searchResults;
     @FindBy(xpath = "//input[@class='udlite-text-input udlite-text-input-small udlite-text-sm udlite-search-form-autocomplete-input js-header-search-field']")
     private WebElement searchAutoComplete;
-    @FindBy(xpath = "(//div[@class='course-card--main-content--3xEIw']/div)[1]")
+    @FindBy(xpath = "(//div[contains(text(),'Angular - The Complete Guide (2020 Edition)')]/ancestor::div[@class='popover--popover--t3rNO popover--popover-hover--14ngr']")
     private WebElement firstItemSearchResults;
 
     By searchResultsLocator = By.xpath("//h1[@class='udlite-heading-xxl']");
     By searchAutoCompleteLocator = By.xpath("//input[@class='udlite-text-input udlite-text-input-small udlite-text-sm udlite-search-form-autocomplete-input js-header-search-field']");
-    By firstItemSearchResultsLocator = By.xpath("(//div[@class='course-card--main-content--3xEIw']/div)[1]");
+    By firstItemSearchResultsLocator = By.xpath("//div[contains(text(),'Angular - The Complete Guide (2020 Edition)')]/ancestor::div[@class='popover--popover--t3rNO popover--popover-hover--14ngr']");
 
 
     public String checkThatCurrentUrlContainsText() {

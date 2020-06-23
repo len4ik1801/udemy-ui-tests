@@ -32,7 +32,7 @@ public class LoginPopup {
     @FindBy(xpath = "//span[text()='L']")
             private WebElement profileIcon;
 
-    By popupTitleLocator = By.xpath("//div[@class='loginbox-v4__header']");
+    By popupTitleLocator = By.xpath("//div[@class='loginbox-v4__header' or contains(text(),' Log In to Your Udemy Account!')]");
     By emailFieldLocator = By.xpath("//input[@name='email']");
     By passwordFldLocator = By.xpath("//input[@name='password']");
     By loginBtnLocator = By.xpath("//input[@name='submit']");

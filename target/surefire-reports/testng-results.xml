@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-06-09T11:38:39 EEST" name="UdemyWeb" finished-at="2020-06-09T11:38:49 EEST" duration-ms="9654">
+  <suite started-at="2020-06-23T20:52:17 EEST" name="UdemyWeb" finished-at="2020-06-23T20:52:25 EEST" duration-ms="8194">
     <groups>
     </groups>
-    <test started-at="2020-06-09T11:38:39 EEST" name="Registration tests" finished-at="2020-06-09T11:38:49 EEST" duration-ms="9654">
-      <class name="com.udemy.RegistrationTest">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.udemy.RegistrationTest@6973bf95]" started-at="2020-06-09T11:38:39 EEST" name="openBrowser" description="Open browser" finished-at="2020-06-09T11:38:41 EEST" duration-ms="1176" status="PASS">
+    <test started-at="2020-06-23T20:52:17 EEST" name="Switch tabs test" finished-at="2020-06-23T20:52:25 EEST" duration-ms="8194">
+      <class name="com.udemy.SwitchTabsTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.udemy.SwitchTabsTest@4386f16]" started-at="2020-06-23T20:52:17 EEST" name="openBrowser" description="Open browser" finished-at="2020-06-23T20:52:18 EEST" duration-ms="1096" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="registrationWithValidCredentials()[pri:0, instance:com.udemy.RegistrationTest@6973bf95]" started-at="2020-06-09T11:38:41 EEST" name="registrationWithValidCredentials" description="Registration with valid credentials" finished-at="2020-06-09T11:38:49 EEST" duration-ms="8371" status="FAIL">
+        <test-method signature="switchTabsTest()[pri:0, instance:com.udemy.SwitchTabsTest@4386f16]" started-at="2020-06-23T20:52:18 EEST" name="switchTabsTest" description="Switch tabs test" finished-at="2020-06-23T20:52:25 EEST" duration-ms="6977" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-purpose='header-signup'] or //span[contains(text(), 'Sign up')] (tried for 5 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //*[@class='dropdown--ufb zero-state dropdown--open-on-hover dropdown' or @class='header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr']' (tried for 5 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-purpose='header-signup'] or //span[contains(text(), 'Sign up')] (tried for 5 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //*[@class='dropdown--ufb zero-state dropdown--open-on-hover dropdown' or @class='header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr']' (tried for 5 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at com.udemy.pages.HomePage.openRegistrationPopup(HomePage.java:53)
-at com.udemy.RegistrationTest.registrationWithValidCredentials(RegistrationTest.java:18)
+at com.udemy.pages.HomePage.clickUdemyForBusinessLink(HomePage.java:112)
+at com.udemy.SwitchTabsTest.switchTabsTest(SwitchTabsTest.java:14)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,16 +54,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
-Caused by: org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //button[@data-purpose='header-signup'] or //span[contains(text(), 'Sign up')] because of the following error:
-TypeError: Failed to execute 'evaluate' on 'Document': The result is not a node set, and therefore cannot be converted to the desired type.
-  (Session info: chrome=83.0.4103.97)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='dropdown--ufb zero-state dropdown--open-on-hover dropdown' or @class='header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr']"}
+  (Session info: chrome=83.0.4103.106)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ek-mm-034.local', ip: 'fe80:0:0:0:23:55da:1a01:33e0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.4', java.version: '13.0.2'
+System info: host: 'Mac-mini.localdomain', ip: 'fe80:0:0:0:1cb1:7af1:fb44:7ba%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '13.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:59817}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 0879b6ad6f3248c51d034901971a192b
-*** Element info: {Using=xpath, value=//button[@data-purpose='header-signup'] or //span[contains(text(), 'Sign up')]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:58132}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 35fa0a1ecf809c7e6f494d0a77594e9f
+*** Element info: {Using=xpath, value=//*[@class='dropdown--ufb zero-state dropdown--open-on-hover dropdown' or @class='header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -79,8 +78,15 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 ... 34 more
 ]]>
@@ -88,12 +94,12 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registrationWithValidCredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.udemy.RegistrationTest@6973bf95]" started-at="2020-06-09T11:38:49 EEST" name="closeBrowser" description="Close browser" finished-at="2020-06-09T11:38:49 EEST" duration-ms="85" status="PASS">
+        </test-method> <!-- switchTabsTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.udemy.SwitchTabsTest@4386f16]" started-at="2020-06-23T20:52:25 EEST" name="closeBrowser" description="Close browser" finished-at="2020-06-23T20:52:25 EEST" duration-ms="90" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.udemy.RegistrationTest -->
-    </test> <!-- Registration tests -->
+      </class> <!-- com.udemy.SwitchTabsTest -->
+    </test> <!-- Switch tabs test -->
   </suite> <!-- UdemyWeb -->
 </testng-results>

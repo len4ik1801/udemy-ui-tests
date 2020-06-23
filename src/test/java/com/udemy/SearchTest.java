@@ -7,9 +7,8 @@ public class SearchTest extends TestBase {
     @Test(description = "Search test")
     public void searchDataTest() {
         homePage.openHomePage();
-        homePage.enterSearchWord("Angular");
-        homePage.clickSearchBtn();
-        Assert.assertTrue(coursesPage.checkThatCurrentUrlContainsText().contains("ref=home"));
+        homePage.enterSearchWord("angular");
+//        Assert.assertTrue(coursesPage.checkThatCurrentUrlContainsText().contains("ref=home"));
         coursesPage.checkSearchResultsText();
         Assert.assertTrue(coursesPage.checkSearchResultsText().contains("angular"));
         coursesPage.checkHeaderSearchFieldText();

@@ -1,9 +1,11 @@
 /Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/com/udemy/pages/RegistrationPopup.java
 /Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/constants/HomeMenuConst.java
-/Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/com/udemy/pages/HomePageForLoginedUser.java
+/Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/constants/TabsConst.java
 /Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/com/udemy/testdata/UserData.java
 /Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/com/udemy/pages/CoursesPage.java
 /Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/com/udemy/pages/HomePage.java
+/Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/com/udemy/pages/TeachOnUdemyPage.java
+/Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/com/udemy/pages/BusinessPage.java
 /Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/com/udemy/models/User.java
 /Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/com/udemy/pages/LoginPopup.java
 /Users/lsokurenko/IdeaProjects/com.udemy/src/main/java/constants/PopupConst.java
