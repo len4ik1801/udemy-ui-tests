@@ -9,25 +9,25 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">UdemyWeb</th></tr>
-<tr><td><a href="#t0">Switch tabs test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">8 194</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Login tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">13 279</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">UdemyWeb</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Switch tabs test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.udemy.SwitchTabsTest</td><td><a href="#m0">switchTabsTest</a></td><td rowspan="1">1592934738371</td><td rowspan="1">6977</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">UdemyWeb</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.udemy.LoginTest</td><td><a href="#m0">loginWithValidCredentials</a></td><td rowspan="1">1593017830213</td><td rowspan="1">12113</td></tr></tbody>
 </table>
-<h2>Switch tabs test</h2><h3 id="m0">com.udemy.SwitchTabsTest#switchTabsTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@class=&apos;dropdown--ufb zero-state dropdown--open-on-hover dropdown&apos; or @class=&apos;header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr&apos;]&apos; (tried for 5 second(s) with 500 milliseconds interval)
+<h2>Login tests</h2><h3 id="m0">com.udemy.LoginTest#loginWithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@class=&apos;udlite-text-xs user-profile-dropdown--email--x0zzy&apos; or @class=&apos;a11 text-midnight-lighter ellipsis&apos;] (tried for 5 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.udemy.pages.HomePage.clickUdemyForBusinessLink(HomePage.java:112)
-	at com.udemy.SwitchTabsTest.switchTabsTest(SwitchTabsTest.java:14)
+	at com.udemy.pages.HomePage.getUserEmailFromProfile(HomePage.java:107)
+	at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:19)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;dropdown--ufb zero-state dropdown--open-on-hover dropdown&apos; or @class=&apos;header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr&apos;]&quot;}
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;udlite-text-xs user-profile-dropdown--email--x0zzy&apos; or @class=&apos;a11 text-midnight-lighter ellipsis&apos;]&quot;}
   (Session info: chrome=83.0.4103.106)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Mac-mini.localdomain&apos;, ip: &apos;fe80:0:0:0:1cb1:7af1:fb44:7ba%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.5&apos;, java.version: &apos;13.0.2&apos;
+System info: host: &apos;Mac-mini.localdomain&apos;, ip: &apos;fe80:0:0:0:876:e79f:c4bb:89bc%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.5&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:58132}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 35fa0a1ecf809c7e6f494d0a77594e9f
-*** Element info: {Using=xpath, value=//*[@class=&apos;dropdown--ufb zero-state dropdown--open-on-hover dropdown&apos; or @class=&apos;header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:61791}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2369b433fb9d55cc0313ecf75c98261d
+*** Element info: {Using=xpath, value=//*[@class=&apos;udlite-text-xs user-profile-dropdown--email--x0zzy&apos; or @class=&apos;a11 text-midnight-lighter ellipsis&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -38,15 +38,8 @@ Session ID: 35fa0a1ecf809c7e6f494d0a77594e9f
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 34 more
 ... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>

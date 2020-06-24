@@ -22,7 +22,7 @@ public class TeachOnUdemyPage {
     @FindBy (xpath = "//h1[@class='text-shadow' or contains(text(),'Make a global impact')]")
     private WebElement teachPageText;
 
-    By teachPageTextLocator = By.xpath("//h1[@class='text-shadow' or contains(text(),'Make a global impact')]");
+    By teachPageTextLocator = By.xpath("//*[@class='small-content']/div/h1");
 
     public String getTeachPageText(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(teachPageTextLocator));

@@ -1,20 +1,19 @@
 package com.udemy.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
+import java.util.NoSuchElementException;
 
 public class HomePage {
     private WebDriver driver;
@@ -49,9 +48,9 @@ public class HomePage {
     private WebElement profileIcon;
     @FindBy(xpath = "//*[@class='udlite-text-xs user-profile-dropdown--email--x0zzy' or @class='a11 text-midnight-lighter ellipsis']")
     private WebElement profileEmail;
-    @FindBy(xpath = "//*[@class='dropdown--ufb zero-state dropdown--open-on-hover dropdown' or @class='header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr']")
+    @FindBy(xpath = "//*[@data-purpose='header' or @class='c_header__inner']//a[.='Udemy for Business']")
     private WebElement udemyForBusinessLink;
-    @FindBy(xpath = "//*[@class='dropdown--open-on-hover dropdown--instructor zero-state dropdown--open-on-hover dropdown' or  contains(@id,'u100-popover-trigger--50')]")
+    @FindBy(xpath = "//*[@data-purpose='header' or @class='c_header__inner']//a[.='Teach on Udemy']")
     private WebElement teachOnUdemyLink;
 
 
@@ -62,8 +61,8 @@ public class HomePage {
     By listOfCategoriesLocator = By.xpath("(//ul[contains(@class,'dropdown-menu__list dropdown-menu__list--level-one') or contains(@class,'list-menu--section')])[1]");
     By profileIconLocator = By.xpath("//div[contains(@class,'header--gap-xxs--2u1SO list-menu--list-menu--1IWp4') or @class='user-avatar__inner fx-c']");
     By profileEmailLocator = By.xpath("//*[@class='udlite-text-xs user-profile-dropdown--email--x0zzy' or @class='a11 text-midnight-lighter ellipsis']");
-    By udemyForBusinessLinkLocator = By.xpath("//*[@class='dropdown--ufb zero-state dropdown--open-on-hover dropdown' or @class='header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr']");
-    By teachOnUdemyLinkLocator = By.xpath("//*[@class='dropdown--open-on-hover dropdown--instructor zero-state dropdown--open-on-hover dropdown' or  contains(@id,'u100-popover-trigger--50')]");
+    By udemyForBusinessLinkLocator = By.xpath("//*[@data-purpose='header' or @class='c_header_inner']//a[.='Udemy for Business']");
+    By teachOnUdemyLinkLocator = By.xpath("//*[@data-purpose='header' or @class='c_header__inner']//a[.='Teach on Udemy']");
 
 
     public void openHomePage() {
@@ -101,8 +100,10 @@ public class HomePage {
     }
 
     public String getUserEmailFromProfile() {
+        Actions actions = new Actions(driver);
         wait.until(ExpectedConditions.visibilityOfElementLocated(profileIconLocator));
-        actions.moveToElement(profileIcon).build().perform();
+        actions.moveToElement(profileIcon).perform();
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(profileEmailLocator));
         WebElement profileEmailInDropdown = driver.findElement(profileEmailLocator);
         return profileEmailInDropdown.getText();
@@ -114,21 +115,25 @@ public class HomePage {
     }
 
     public void moveToTheBusinessTab() {
-        Actions action = new Actions(driver);
-        action.keyDown(Keys.COMMAND).sendKeys(Keys.TAB).build().perform();
-
+        wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+        List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
     }
-    public void clickTeachOnUdemyLink(){
+
+    public void clickTeachOnUdemyLink() {
         wait.until(ExpectedConditions.elementToBeClickable(teachOnUdemyLink));
         teachOnUdemyLink.click();
     }
-    public void moveToTheTeachTab() {
-        Actions action = new Actions(driver);
-        action.keyDown(Keys.COMMAND).sendKeys(Keys.TAB).build().perform();
-
-    }
 
 
-
+//    public boolean checkUdemyForBusinessLinkIsDisplay(){
+//        try {
+//            return new WebDriverWait(driver, 2)
+//                    .until(ExpectedConditions.visibilityOfElementLocated(udemyForBusinessLinkLocator)).isDisplayed();
+//        }catch (TimeoutException e){
+//            return false;
+//        }
+//
+//    }
 
 }

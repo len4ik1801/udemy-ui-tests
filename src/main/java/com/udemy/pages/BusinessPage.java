@@ -10,17 +10,22 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class BusinessPage  {
+public class BusinessPage {
     private WebDriver driver;
     private WebDriverWait wait;
+    private String mainWindowHandle;
+
 
     public BusinessPage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
         this.wait = wait;
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(xpath = "//h2/span[@style='font-weight: 400;' and contains(text(),'See why leading organizations choose Udemy for Business as their destination for employee learning')]")
     private WebElement businessPageText;
 
@@ -31,12 +36,16 @@ public class BusinessPage  {
         return driver.getCurrentUrl();
     }
 
-    public String getBusinessPageText(){
+    public String getBusinessPageText() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(businessPageTextLocator));
         return businessPageText.getText();
     }
-    public void returnToPriviousTab(){
-        Actions action= new Actions(driver);
-        action.keyDown(Keys.COMMAND).keyDown(Keys.SHIFT).sendKeys(Keys.TAB).build().perform();
-    }
+
+        public void returnToPriviousTab(){
+            wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+            List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+            driver.switchTo().window(tabs.get(0));
+
+        }
+
 }

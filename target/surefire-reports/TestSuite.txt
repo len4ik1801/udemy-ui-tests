@@ -1,19 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.607 s <<< FAILURE! - in TestSuite
-com.udemy.SwitchTabsTest.switchTabsTest  Time elapsed: 6.982 s  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //*[@class='dropdown--ufb zero-state dropdown--open-on-hover dropdown' or @class='header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr']' (tried for 5 second(s) with 500 milliseconds interval)
-	at com.udemy.SwitchTabsTest.switchTabsTest(SwitchTabsTest.java:14)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.532 s <<< FAILURE! - in TestSuite
+com.udemy.LoginTest.loginWithValidCredentials  Time elapsed: 12.116 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@class='udlite-text-xs user-profile-dropdown--email--x0zzy' or @class='a11 text-midnight-lighter ellipsis'] (tried for 5 second(s) with 500 milliseconds interval)
+	at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:19)
 Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='dropdown--ufb zero-state dropdown--open-on-hover dropdown' or @class='header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr']"}
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='udlite-text-xs user-profile-dropdown--email--x0zzy' or @class='a11 text-midnight-lighter ellipsis']"}
   (Session info: chrome=83.0.4103.106)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Mac-mini.localdomain', ip: 'fe80:0:0:0:1cb1:7af1:fb44:7ba%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '13.0.2'
+System info: host: 'Mac-mini.localdomain', ip: 'fe80:0:0:0:876:e79f:c4bb:89bc%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '13.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:58132}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 35fa0a1ecf809c7e6f494d0a77594e9f
-*** Element info: {Using=xpath, value=//*[@class='dropdown--ufb zero-state dropdown--open-on-hover dropdown' or @class='header--gap-sm--2PR4A header--try-ufb--1kzro udlite-popover-open popover--popover--t3rNO popover--popover-hover--14ngr']}
-	at com.udemy.SwitchTabsTest.switchTabsTest(SwitchTabsTest.java:14)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/rs/880qjlv97yv...}, goog:chromeOptions: {debuggerAddress: localhost:61791}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2369b433fb9d55cc0313ecf75c98261d
+*** Element info: {Using=xpath, value=//*[@class='udlite-text-xs user-profile-dropdown--email--x0zzy' or @class='a11 text-midnight-lighter ellipsis']}
+	at com.udemy.LoginTest.loginWithValidCredentials(LoginTest.java:19)
 

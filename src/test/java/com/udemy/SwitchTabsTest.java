@@ -20,6 +20,7 @@ public class SwitchTabsTest extends TestBase{
         homePage.clickTeachOnUdemyLink();
         Assert.assertEquals(teachOnUdemyPage.getTeachPageText(),TEACH_PAGE_TEXT);
         Assert.assertTrue(teachOnUdemyPage.checkThatCurrentUrlContainsText().contains("teaching"));
+        pause(4000);
 
 
 

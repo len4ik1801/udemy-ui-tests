@@ -10,15 +10,15 @@
 <!--            </class>-->
 <!--        </classes>-->
 <!--    </test>-->
-<!--    <test name="Login tests">-->
-<!--        <classes>-->
-<!--            <class name="com.udemy.LoginTest">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidCredentials"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Login tests">
+        <classes>
+            <class name="com.udemy.LoginTest">
+                <methods>
+                    <include name="loginWithValidCredentials"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 <!--    <test name="Search tests">-->
 <!--        <classes>-->
 <!--            <class name="com.udemy.SearchTest">-->
@@ -37,13 +37,13 @@
 <!--            </class>-->
 <!--        </classes>-->
 <!--    </test>-->
-        <test name="Switch tabs test">
-        <classes>
-            <class name="com.udemy.SwitchTabsTest">
-                <methods>
-                    <include name="switchTabsTest"/>
-                </methods>
-            </class>
-        </classes>
-       </test>
+<!--        <test name="Switch tabs test">-->
+<!--        <classes>-->
+<!--            <class name="com.udemy.SwitchTabsTest">-->
+<!--                <methods>-->
+<!--                    <include name="switchTabsTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--       </test>-->
 </suite>
