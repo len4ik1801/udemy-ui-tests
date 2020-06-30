@@ -38,20 +38,20 @@ public class LoginPopup {
     By loginBtnLocator = By.xpath("//input[@name='submit']");
     By profileIconLocator = By.xpath("//span[text()='L']");
 
-     public LoginPopup loginWithCookies(){
-         Cookie cookieSessionId = new Cookie.Builder("dj_session_id","mtvlzd1bs3o7j1qrghclqlgx310pw02v")
-                 .domain("www.udemy.com")
-                 .expiresOn(new Date(2020,07,02))
-                 .isHttpOnly(true)
-                 .isSecure(false)
-                 .path("/")
-                 .build();
-         driver.manage().addCookie(cookieSessionId);
-         driver.navigate().refresh();
- //        wait.until(ExpectedConditions.visibilityOfElementLocated(profileIconLocator));
- //        WebElement profileIcon = driver.findElement(profileIconLocator);
-         return this;
-     }
+//     public LoginPopup loginWithCookies(){
+//         Cookie cookieSessionId = new Cookie.Builder("dj_session_id","mtvlzd1bs3o7j1qrghclqlgx310pw02v")
+//                 .domain("www.udemy.com")
+//                 .expiresOn(new Date(2020,07,02))
+//                 .isHttpOnly(true)
+//                 .isSecure(false)
+//                 .path("/")
+//                 .build();
+//         driver.manage().addCookie(cookieSessionId);
+//         driver.navigate().refresh();
+// //        wait.until(ExpectedConditions.visibilityOfElementLocated(profileIconLocator));
+// //        WebElement profileIcon = driver.findElement(profileIconLocator);
+//         return this;
+//     }
      public String getPopupTitle(){
          wait.until(ExpectedConditions.visibilityOfElementLocated(popupTitleLocator));
          return popupTitle.getText();

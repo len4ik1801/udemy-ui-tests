@@ -13,6 +13,7 @@ public class LoginTest extends TestBase{
     @Test(description ="Login with valid credentials")
     public void loginWithValidCredentials(){
         homePage.openHomePage();
+        homePage.openLoginPopup();
         driver.manage().addCookie(createdUser.getCookie());
         driver.navigate().refresh();
        pause(4000);

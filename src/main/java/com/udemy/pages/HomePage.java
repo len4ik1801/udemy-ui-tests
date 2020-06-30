@@ -1,7 +1,6 @@
 package com.udemy.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -13,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 public class HomePage {
     private WebDriver driver;
@@ -52,6 +50,16 @@ public class HomePage {
     private WebElement udemyForBusinessLink;
     @FindBy(xpath = "//*[@data-purpose='header' or @class='c_header__inner']//a[.='Teach on Udemy']")
     private WebElement teachOnUdemyLink;
+    @FindBy(xpath = "//a[@href='/user/edit-account/']")
+            private WebElement accountSettingsLinkInDropdown;
+    @FindBy(xpath = "//a[@data-purpose='user_manage:edit-profile']")
+            private WebElement profileSettingsLink;
+    @FindBy(xpath = "//input[@name='surname']")
+            private WebElement lastNameFieldInProfSettings;
+    @FindBy(xpath = "//input[@value='Save']")
+            private WebElement saveBtnProfile;
+    @FindBy(xpath = "//span[@class='text-midnight ellipsis']")
+            private WebElement profileLastName;
 
 
     By signUpBtnLocator = By.xpath("//*[@data-purpose='header-signup' and contains(text(),'Sign Up') or contains(@href,'signup-popup')]");
@@ -63,6 +71,11 @@ public class HomePage {
     By profileEmailLocator = By.xpath("//*[@class='udlite-text-xs user-profile-dropdown--email--x0zzy' or @class='a11 text-midnight-lighter ellipsis']");
     By udemyForBusinessLinkLocator = By.xpath("//*[@data-purpose='header' or @class='c_header_inner']//a[.='Udemy for Business']");
     By teachOnUdemyLinkLocator = By.xpath("//*[@data-purpose='header' or @class='c_header__inner']//a[.='Teach on Udemy']");
+    By accountSettingsLinkLocator = By.xpath("//a[@href='/user/edit-account/']");
+    By profileSettingsLinkLocator = By.xpath("//a[@data-purpose='user_manage:edit-profile']");
+    By lastNameFieldInProfSettingsLocator = By.xpath("//input[@name='surname']");
+    By saveBtnProfileLocator = By.xpath("//input[@value='Save']");
+    By profileLastNameLocator = By.xpath("//span[@class='text-midnight ellipsis']");
 
 
     public void openHomePage() {
@@ -124,6 +137,41 @@ public class HomePage {
         wait.until(ExpectedConditions.elementToBeClickable(teachOnUdemyLink));
         teachOnUdemyLink.click();
     }
+
+    public void navigateToProfileSettings(){
+        Actions actions = new Actions(driver);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(profileIconLocator));
+        profileIcon.click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(accountSettingsLinkLocator));
+        actions.moveToElement(accountSettingsLinkInDropdown).perform();
+        accountSettingsLinkInDropdown.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(profileSettingsLinkLocator));
+        profileSettingsLink.click();
+    }
+    public HomePage enterLastNameInProfile(String lastName){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(lastNameFieldInProfSettingsLocator));
+        lastNameFieldInProfSettings.clear();
+        lastNameFieldInProfSettings.sendKeys(lastName);
+        return this;
+    }
+    public void clickSaveBtnInProfile(){
+        Actions actions = new Actions(driver);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(saveBtnProfileLocator));
+        actions.moveToElement(saveBtnProfile).perform();
+        saveBtnProfile.click();
+    }
+    public String getLastNameFromProfile() {
+        Actions actions = new Actions(driver);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(profileIconLocator));
+        actions.moveToElement(profileIcon).perform();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(profileLastNameLocator));
+        WebElement profileEmailInDropdown = driver.findElement(profileLastNameLocator);
+        return profileEmailInDropdown.getText();
+    }
+
+
 
 
 //    public boolean checkUdemyForBusinessLinkIsDisplay(){

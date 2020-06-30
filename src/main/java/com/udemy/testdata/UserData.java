@@ -28,4 +28,18 @@ public interface UserData {
             .setPassword("Udemy123Ud")
             .setName("lena233");
 
+    Cookie cookie2 = new Cookie.Builder("dj_session_id","rbggoemvck0zoohgwp81mrwwjqtth6x9")
+            .domain("www.udemy.com")
+            .expiresOn(new Date(2020,07,30))
+            .isHttpOnly(true)
+            .isSecure(false)
+            .path("/")
+            .build();
+
+    User premiumUser = new User()
+            .setCookie(cookie2)
+            .setEmail("lena111@appcreative.net")
+            .setPassword("Udemy123Ud")
+            .setName("lena111");
+
 }

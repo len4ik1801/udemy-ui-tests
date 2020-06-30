@@ -9,7 +9,16 @@ public class User {
     private String UserIcon;
     private Cookie cookie;
 
-    public User(){}
+
+    public User(){};
+    public User(String name, String password, String email, Cookie cookie){
+        this.name = name;
+        this.password = password;
+        this.email = email;
+        this.cookie = cookie;
+    }
+
+
 
 
     public User setName(String name){
@@ -32,6 +41,8 @@ public class User {
         this.UserIcon = newUserIcon;
         return this;
     }
+
+
     public Cookie getCookie(){return cookie;}
     public String getUserLbl(){return UserIcon;}
     public String getName(){return name;}
